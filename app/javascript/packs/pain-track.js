@@ -1,22 +1,35 @@
 /* eslint no-console: 0 */
-// Run this example by adding <%= javascript_pack_tag 'hello_vue' %> (and
-// <%= stylesheet_pack_tag 'hello_vue' %> if you have styles in your component)
-// to the head of your layout file,
-// like app/views/layouts/application.html.erb.
-// All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
-import App from '../app.vue'
+import TurbolinksAdapter from 'vue-turbolinks'
+import VueResource from 'vue-resource'
+import Vue from 'vue/dist/vue.esm.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({
-    el,
-    render: h => h(App)
-  })
+Vue.use(VueResource);
+Vue.use(TurbolinksAdapter);
 
-  console.log(app)
-})
+document.addEventListener('turbolinks:load', () => {
+  var app = new Vue({
+    el: '#app',
+    data: {
+      pain_levels: []
+    },
+    ready: () => {
+      var that;
+      that = this;
+      alert('starting!');
+      $.ajax({url: 'index.json'})
+        .done(res => {
+          alert(res);
+          that.pain_levels = res;
+        })
+        .error(m => {
+          alert(m);
+          that.pain_levels = m;
+        });
+      }
+    });
+  });
+      
 
 
 // The above code uses Vue without the compiler, which means you cannot

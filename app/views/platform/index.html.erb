@@ -1,0 +1,20 @@
+<h1>Pain Tracker</h1>
+
+<%=  javascript_pack_tag "pain-track" %>
+
+<div id="app">
+  <table>
+    <thead>
+      <tr>
+        <th>Date & Time</th>
+        <th>Pain Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="pain_level in pain_levels">
+        <td>{{ pain_level.created_at }}</td>
+        <td>{{ pain_level.pain_level }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
