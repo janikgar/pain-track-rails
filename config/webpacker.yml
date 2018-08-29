@@ -14,7 +14,11 @@ default: &default
   cache_manifest: false
 
   extensions:
+<<<<<<< HEAD
     - .vue
+=======
+    - .jsx
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
     - .js
     - .sass
     - .scss

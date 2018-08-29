@@ -32,14 +32,29 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
+<<<<<<< HEAD
+=======
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.perform_caching = false
+
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
+<<<<<<< HEAD
   # config.active_record.migration_error = :page_load
 
   # Highlight code that triggered database queries in logs.
   # config.active_record.verbose_query_logs = true
+=======
+  config.active_record.migration_error = :page_load
+
+  # Highlight code that triggered database queries in logs.
+  config.active_record.verbose_query_logs = true
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large

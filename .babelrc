@@ -1,5 +1,6 @@
 {
   "presets": [
+<<<<<<< HEAD
     ["env", {
       "modules": false,
       "targets": {
@@ -14,5 +15,29 @@
     "syntax-dynamic-import",
     "transform-object-rest-spread",
     ["transform-class-properties", { "spec": true }]
+=======
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ]
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
   ]
 }

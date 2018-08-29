@@ -3,12 +3,22 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+<<<<<<< HEAD
     "bootstrap-vue": "^2.0.0-rc.11",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-resource": "^1.5.1",
     "vue-template-compiler": "^2.5.17",
     "vue-turbolinks": "^2.0.3"
+=======
+    "babel-preset-react": "^6.24.1",
+    "caniuse-lite": "^1.0.30000877",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react_ujs": "^2.4.4",
+    "webpack": "^4.16.5"
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

@@ -4,10 +4,17 @@ require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
+<<<<<<< HEAD
 # require "active_record/railtie"
 require "active_storage/engine"
 require "action_controller/railtie"
 # require "action_mailer/railtie"
+=======
+require "active_record/railtie"
+require "active_storage/engine"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
@@ -22,10 +29,13 @@ module PainTrackRails
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+<<<<<<< HEAD
     config.time_zone = "America/Chicago"
 
     # Mongoid.load! 
 
+=======
+>>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
