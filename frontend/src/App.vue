@@ -1,12 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="app" class="container">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view/> -->
+    <PainTable />
   </div>
 </template>
+
+<script>
+import PainTable from '@/components/PainTable.vue'
+export default {
+  name: 'App',
+  components: { PainTable }
+}
+</script>
 
 <style lang="scss">
 #app {
