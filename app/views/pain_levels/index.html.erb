@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pain Levels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pain level</th>
+      <th>Datetime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pain_levels.each do |pain_level| %>
+      <tr>
+        <td><%= pain_level.pain_level %></td>
+        <td><%= pain_level.datetime %></td>
+        <td><%= link_to 'Show', pain_level %></td>
+        <td><%= link_to 'Edit', edit_pain_level_path(pain_level) %></td>
+        <td><%= link_to 'Destroy', pain_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pain Level', new_pain_level_path %>

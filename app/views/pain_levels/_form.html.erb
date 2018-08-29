@@ -1,0 +1,27 @@
+<%= form_with(model: pain_level, local: true) do |form| %>
+  <% if pain_level.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pain_level.errors.count, "error") %> prohibited this pain_level from being saved:</h2>
+
+      <ul>
+      <% pain_level.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pain_level %>
+    <%= form.number_field :pain_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datetime %>
+    <%= form.datetime_select :datetime %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

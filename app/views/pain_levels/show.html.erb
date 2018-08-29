@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pain level:</strong>
+  <%= @pain_level.pain_level %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @pain_level.datetime %>
+</p>
+
+<%= link_to 'Edit', edit_pain_level_path(@pain_level) %> |
+<%= link_to 'Back', pain_levels_path %>

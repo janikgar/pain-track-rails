@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <p>{{ message }}</p>
+    <PainTable />
   </div>
 </template>
 
 <script>
+import PainTable from './components/painTable.vue'
+
 export default {
   data: function () {
     return {
-      message: ""
+      message: "foo"
     }
-  }
+  },
+  components: { PainTable }
 }
 </script>
 
