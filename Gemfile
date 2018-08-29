@@ -6,11 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
-<<<<<<< HEAD
 # gem 'pg', '>= 0.18', '< 2.0'
-=======
-gem 'pg', '>= 0.18', '< 2.0'
->>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -21,10 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-<<<<<<< HEAD
-=======
-gem 'react-rails'
->>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -56,21 +48,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-<<<<<<< HEAD
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-=======
->>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
 end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
 
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'mongoid', '~> 7.0'
-=======
->>>>>>> 38a2ee0ea3ab0a69cc3adec52b20191cfb0f9335
