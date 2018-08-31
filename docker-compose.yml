@@ -1,18 +1,34 @@
 version: '3'
+networks:
+  default:
+    driver: "bridge"
+
 services:
-  rails:
-    build: backend
-    ports: "3000:3000"
-    depends_on:
-      - mongo
-    volumes:
-      - backend:/app/backend
-  vue:
-    build: frontend
-    ports: "8080:8080"
-    depends_on:
-      - rails
-    volumes:
-      - frontend:/app/frontend
   mongo:
     image: "mongo:4.0.1"
+    container_name: "mongo-db"
+    volumes:
+      - data:/var/lib/mongo
+    ports:
+      - "27017:27017"
+  rails:
+    build: backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    container_name: "rails-backend"
+    # volumes:
+    #   - backend:/app/backend
+  # vue:
+  #   build: frontend
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - rails
+  #   container_name: "vue-frontend"
+  #   # volumes:
+  #   #   - frontend:/app/frontend
+volumes:
+  data:
+    external: true
